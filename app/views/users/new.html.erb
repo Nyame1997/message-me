@@ -1,14 +1,13 @@
+
 <h2 class="ui center aligned mt-4 header">Welcome to MessageMe -- <em>a complete Chat App</em></h2>
 <h4 class="ui center aligned medium icon header">
   <i class="circular green keyboard outline icon"></i>
-  Log In to Continue
+  Sign Up to Continue
 </h4>
 
-<div class="ui placeholder segment">
-  <div class="ui two column very relaxed stackable grid">
-    <div class="column">
-      <div class="ui form">
-      <%= form_for(:session, url: login_path, html: { class: "ui form", role: "form"}) do |f| %>
+<div class="ui container">
+  <form class="ui form">
+   <%= form_for(:session, url: signup_path, html: { class: "ui form", role: "form"}) do |f| %>
         <div class="field">
           <%= f.label :username, "Username" %>
           <div class="ui left icon input">
@@ -23,15 +22,7 @@
             <i class="lock icon"></i>
           </div>
         </div>
-        <%= f.button "Login", class: "ui green submit button" %>
-      <% end %>
-      </div>
-    </div>
-    <div class="middle aligned column">
-      <%= link_to '<i class="signup icon"></i>Sign Up'.html_safe, signup_path, class: "ui green big button" %>
-    </div>
-  </div>
-  <div class="ui vertical divider">
-    Or
-  </div>
+        <%= f.button "Sign Up", class: "ui green submit button" %>
+    <% end %>
+  </form>
 </div>
